@@ -8,5 +8,11 @@ nginx:
 
 go:
   build: docker/go
+  links:
+    - "mongodb"
+  restart: always
 
+mongodb:
+  build: docker/mongo
+  container_name: user_db
   restart: always
