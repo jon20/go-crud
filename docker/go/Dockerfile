@@ -5,7 +5,7 @@ WORKDIR /go/src/app
 EXPOSE 9000
 
 ADD  .  /go/src/
-
+ENV TZ='Asia/Tokyo'
 CMD ["/usr/local/go/bin/go", "run", "/go/src/main.go"]
 RUN go get -u  gopkg.in/mgo.v2
 RUN go get -u  gopkg.in/mgo.v2/bson

@@ -22,5 +22,4 @@ func apiRequest(w http.ResponseWriter, r *http.Request) {
 	
 	res, _ := json.Marshal(Res_Hello{"Hello World!!"})
 	fmt.Fprintf(w, string(res))
-	fmt.Println("Hello")
 }
